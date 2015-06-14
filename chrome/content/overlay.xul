@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<overlay id="sessionstoreOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<script type="application/javascript" src="chrome://youtubeloop/content/overlay.js" />
+	<hbox id="nav-bar-customization-target">
+		<toolbarbutton id="youtubeloop-toolbarbutton"  image="chrome://youtubeloop/content/TLoop.png" label="Session Store" class="toolbarbutton-1 chromeclass-toolbar-additional" tooltiptext="Loop" oncommand="foo()">
+		</toolbarbutton>
+
+		<toolbarbutton collapsed="true">
+			<html:div id="ytp-loop-button-by-hainee" 
+				class="ytp-button yt-uix-tooltip" 
+				loop="false"
+				data-tooltip-text="Not looping" 
+				style="float: right; 
+					background: transparent url(chrome://youtubeloop/content/loop-button2.png) no-repeat center top/50% auto; width: 30px; height: 27px;">
+			</html:div>
+		</toolbarbutton>
+	</hbox>
+
+
+</overlay>

@@ -1,0 +1,7 @@
+content 	youtubeloop 							chrome/content/
+overlay 	chrome://browser/content/browser.xul 	chrome://youtubeloop/content/overlay.xul
+
+skin 		youtubeloop 		classic/1.0 		skin/classic/
+
+style 		chrome://browser/content/browser.xul 			chrome://helloworld/skin/overlay.css
+style 		chrome://global/content/customizeToolbar.xul 	chrome://helloworld/skin/overlay.css
