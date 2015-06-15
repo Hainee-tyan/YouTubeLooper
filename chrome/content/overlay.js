@@ -1,8 +1,3 @@
-// var x = document.getElementById("urlbar");
-// x.inputField.onchange = function() {
-// 	alert(this.value);
-// };
-
 function foo(){
 	var win = content;
 	var url = content.location.href;
@@ -46,6 +41,7 @@ function foo(){
 		// };
 
 		var script = doc.createElement("SCRIPT");
+		script.setAttribute("id", "ytp-loop-script-by-hainee");
 		var scriptText = doc.createTextNode(ytLoopByHainee);
 		script.appendChild(scriptText);
 		doc.head.appendChild(script);
@@ -68,3 +64,52 @@ function ytLoopByHainee(loopButton) {
 		loopButton.setAttribute("loop", "true");
 	}
 };
+
+
+var ytLoopByHaineeExtension = {
+
+	oldVideoSrc: null,
+	onPageLoad: function(event) {		
+	  	if (event.originalTarget instanceof Components.interfaces.nsIDOMHTMLDocument) {
+		    var win = event.originalTarget.defaultView;
+
+		    if (win.frameElement) {
+		      win = win.top;
+		    }
+
+		    var URL = win.location.href;
+		    if (URL.match(/(http|https).*youtube.*watch/i)) {
+
+		    	var newVideoSrc = content.document.getElementsByTagName("video")[0].getAttribute("src");
+		    	if (win.has_yt_loop_by_hainee) {
+		    		if (this.oldVideoSrc == newVideoSrc) 
+		    			return;
+		    		this.oldVideoSrc = newVideoSrc;
+		    		var loopButton = content.document.getElementById("ytp-loop-button-by-hainee");
+
+		    		if (loopButton.getAttribute("loop") == "true") {
+						loopButton.style.backgroundPosition = "center top";	
+						loopButton.setAttribute("data-tooltip-text", "Not looping");
+						loopButton.setAttribute("loop", "false");
+					}
+					return;
+		    	};
+
+		    	// var script = content.document.getElementById("ytp-loop-script-by-hainee");
+		    	// if (script)
+		    	// 	content.document.head.removeChild(script);
+		    	// var button = content.document.getElementById("ytp-loop-button-by-hainee");
+		    	// var buttonsBar = content.document.getElementsByClassName("html5-player-chrome")[0];
+		    	// if (button && buttonsBar) 
+		    	// 	buttonsBar.removeChild(button);
+		    	foo();
+		    	win.has_yt_loop_by_hainee = true;
+		    };
+
+	  	};
+	}
+};
+
+window.addEventListener("load", function () {
+	gBrowser.addEventListener("load", ytLoopByHaineeExtension.onPageLoad, true);
+}, false);
