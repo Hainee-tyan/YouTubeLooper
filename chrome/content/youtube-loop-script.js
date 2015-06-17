@@ -34,20 +34,31 @@ var ytLoopExtensionByHainee = {
 
 	//function to run on "loop" button click
 	onclickYtloopButtonByHainee: function onclickYtloopButtonByHainee(loopButton) {
-		var videoPlayer = loopButton.ownerDocument.getElementsByTagName("video")[0];
+		//var videoPlayer = loopButton.ownerDocument.getElementsByTagName("video")[0];
+		var player = loopButton.ownerDocument.getElementById("movie_player");
+
 		var isLooping = loopButton.getAttribute("loop");
 		if (isLooping == "true") {
 			loopButton.style.backgroundPosition = "center top";	
 			loopButton.setAttribute("data-tooltip-text", "Not looping");
 			loopButton.setAttribute("loop", "false");
-			videoPlayer.removeAttribute("loop");
+			//videoPlayer.removeAttribute("loop");
+			player.removeEventListener("onStateChange", loop);
+
 		}
 		else {
 			loopButton.style.backgroundPosition = "center bottom";
 			loopButton.setAttribute("data-tooltip-text", "Looping");
 			loopButton.setAttribute("loop", "true");
-			videoPlayer.setAttribute("loop", "true");
-		}
+			//videoPlayer.setAttribute("loop", "true");
+			player.addEventListener("onStateChange", loop);
+		};
+
+		function loop(state) {
+			if (state == 0) {
+				player.playVideo();				
+			};
+		};
 	},
 
     onPageLoad: function(aEvent) {
