@@ -5,4 +5,4 @@ Simple addon for Firefox, creating "Loop" button in YouTube player controls bar,
 
 ![Youtube player with loop button in "loop" position".](/screenshots/loopingButtonScreenshot.png)
 
-WARNING! Not done yet.
+WARNING! Not done yet. Works ONLY with html5 video for now.
