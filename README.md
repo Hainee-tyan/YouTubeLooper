@@ -1,5 +1,5 @@
 # YouTubeLooper
-Simple addon for Firefox, creating "Loop" button in YouTube player controls bar, allowing you to endlessly loop video.
+Simple addon for Firefox, creating "Loop" button in YouTube player controls bar, allowing you to endlessly loop video. Doesn't work on playlists.
 
 ![Youtube player with loop button in "not loop" position".](/screenshots/notLoopingButtonScreenshot.png)
 
