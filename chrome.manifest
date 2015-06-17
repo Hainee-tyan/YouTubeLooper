@@ -1,2 +1,4 @@
 content 	youtubeloop 							chrome/content/
 overlay 	chrome://browser/content/browser.xul 	chrome://youtubeloop/content/youtube-loop-overlay.xul
+
+skin 		youtubeloop 		classic/1.0			chrome/skin/

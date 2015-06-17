@@ -5,7 +5,7 @@
     <Description about="urn:mozilla:install-manifest">
 
         <em:id>YoutubeLoop@hainee.tyan</em:id>
-        <em:version>0.8</em:version>
+        <em:version>1.0</em:version>
         <em:type>2</em:type>
     		
         <!-- Firefox -->
@@ -19,6 +19,7 @@
 
         <!-- Front End MetaData -->
         <em:name>Youtube Loop</em:name>
+        <em:iconURL>chrome://youtubeloop/skin/icon128.png</em:iconURL>
         <em:description>Adds ability to play video on YouTube endlessly.</em:description>
         <em:creator>Hainee-tyan</em:creator>
         <em:homepageURL>https://github.com/Hainee-tyan</em:homepageURL>
