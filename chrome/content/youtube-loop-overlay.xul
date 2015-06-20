@@ -2,24 +2,40 @@
 <overlay id="sessionstoreOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<script type="application/javascript" src="chrome://youtubeloop/content/youtube-loop-script.js" />
+
 	<hbox id="nav-bar-customization-target">
 		
 		<!-- experiment button only -->
-		<!-- <toolbarbutton id="youtubeloop-toolbarbutton"  image="chrome://youtubeloop/content/TLoop.png" label="Session Store" class="toolbarbutton-1 chromeclass-toolbar-additional" tooltiptext="Loop" oncommand="ytLoopExtensionByHainee.ytLoopByHaineeToolbarCommand()">
+		<!-- <toolbarbutton id="youtubeloop-toolbarbutton"  image="chrome://youtubeloop/content/toolbar-loop-button.png" label="Session Store" class="toolbarbutton-1 chromeclass-toolbar-additional" tooltiptext="Loop" oncommand="ytLoopExtensionByHainee.ytLoopByHaineeToolbarCommand()">
 		</toolbarbutton> -->
 
 		<toolbarbutton collapsed="true">
-			<html:div 
-				id="ytp-loop-button-by-hainee" 
-				class="ytp-button yt-uix-tooltip" 
+			<html:button 
+				id="ytp-loop-button-by-hainee"
 				loop="false"
-				data-tooltip-text="Not looping" 
-				style="float: right; 
-					background: transparent url(chrome://youtubeloop/content/loop-button2.png) no-repeat center top/50% auto; width: 30px; height: 27px;"
+				class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity pause-resume-autoplay yt-uix-tooltip"
+				data-tooltip-text="Not looping"
 				onclick="onclickYtloopButtonByHainee(this)">
-			</html:div>
+
+				<html:img 
+					id="yt-loop-button-by-hainee-noloop-img" 
+					src="chrome://youtubeloop/content/no-loop-button.png" 
+					style="width: 20px; height: 20px; margin-right: 6px" />
+
+				<html:img 
+					id="yt-loop-button-by-hainee-loop-img" 
+					src="chrome://youtubeloop/content/loop-button.png" 
+					style="width: 20px; height: 20px; margin-right: 6px; display: none" />
+
+				<html:span 
+					id="ytp-loop-text-by-hainee" 
+					class="yt-uix-button-content">
+					Not looping
+				</html:span>
+
+			</html:button>
 		</toolbarbutton>
 	</hbox>
-
-
 </overlay>
+
+<!-- yt-uix-button yt-uix-button-size-default yt-uix-button-opacity yt-uix-button-has-icon no-icon-markup pause-resume-autoplay yt-uix-tooltip -->
