@@ -6,31 +6,29 @@
 	<hbox id="nav-bar-customization-target">
 		
 		<!-- experiment button only -->
-		<!-- <toolbarbutton id="youtubeloop-toolbarbutton"  image="chrome://youtubeloop/content/toolbar-loop-button.png" label="Session Store" class="toolbarbutton-1 chromeclass-toolbar-additional" tooltiptext="Loop" oncommand="ytLoopExtensionByHainee.ytLoopByHaineeToolbarCommand()">
+		<!-- <toolbarbutton id="youtubeloop-toolbarbutton"  image="chrome://youtubeloop/content/toolbar-loop-button.png" label="Session Store" class="toolbarbutton-1 chromeclass-toolbar-additional" tooltiptext="&youtubeloop.looping;" oncommand="ytLoopExtensionByHainee.ytLoopByHaineeToolbarCommand()">
 		</toolbarbutton> -->
 
 		<toolbarbutton collapsed="true">
 			<html:button 
-				id="ytp-loop-button-by-hainee"
+				id="yt-loop-button-by-hainee"
 				loop="false"
 				class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity pause-resume-autoplay yt-uix-tooltip"
 				data-tooltip-text="Not looping"
 				onclick="onclickYtloopButtonByHainee(this)">
 
 				<html:img 
-					id="yt-loop-button-by-hainee-noloop-img" 
 					src="chrome://youtubeloop/skin/no-loop-button.png" 
+					class="yt-loop-button-by-hainee-noloop-img"
 					style="width: 20px; height: 20px; margin-right: 6px" />
 
-				<html:img 
-					id="yt-loop-button-by-hainee-loop-img" 
+				<html:img
 					src="chrome://youtubeloop/skin/loop-button.png" 
+					class="yt-loop-button-by-hainee-loop-img"
 					style="width: 20px; height: 20px; margin-right: 6px; display: none" />
 
-				<html:span 
-					id="ytp-loop-text-by-hainee" 
-					class="yt-uix-button-content">
-					Not looping
+				<html:span
+					class="yt-uix-button-content yt-loop-text-by-hainee">
 				</html:span>
 
 			</html:button>

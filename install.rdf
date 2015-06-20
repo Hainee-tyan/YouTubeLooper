@@ -24,5 +24,13 @@
         <em:creator>Hainee-tyan</em:creator>
         <em:homepageURL>https://github.com/Hainee-tyan</em:homepageURL>
 
+        <em:localized>
+          <Description>
+            <em:locale>ru</em:locale>
+            <em:name>Youtube Loop</em:name>
+            <em:description>Добавляет кнопку непрерывного повтора видео на YouTube.</em:description>
+          </Description>
+        </em:localized>
+
     </Description>
 </RDF>

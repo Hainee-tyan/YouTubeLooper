@@ -2,3 +2,6 @@ content 	youtubeloop 							chrome/content/
 overlay 	chrome://browser/content/browser.xul 	chrome://youtubeloop/content/youtube-loop-overlay.xul
 
 skin 		youtubeloop 		classic/1.0			chrome/skin/
+
+locale 		youtubeloop 		en-US 				chrome/locale/en-US/
+locale 		youtubeloop 		ru-RU 				chrome/locale/ru-RU/
