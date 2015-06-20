@@ -19,12 +19,12 @@
 
 				<html:img 
 					id="yt-loop-button-by-hainee-noloop-img" 
-					src="chrome://youtubeloop/content/no-loop-button.png" 
+					src="chrome://youtubeloop/skin/no-loop-button.png" 
 					style="width: 20px; height: 20px; margin-right: 6px" />
 
 				<html:img 
 					id="yt-loop-button-by-hainee-loop-img" 
-					src="chrome://youtubeloop/content/loop-button.png" 
+					src="chrome://youtubeloop/skin/loop-button.png" 
 					style="width: 20px; height: 20px; margin-right: 6px; display: none" />
 
 				<html:span 
